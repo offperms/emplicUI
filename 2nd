@@ -1,0 +1,10 @@
+local TeleportToLocation; TeleportToLocation = function(CoordinateFrame: CFrame)
+    local Character = LocalPlayer.Character
+    if Character then
+        local Humanoid: Humanoid = Character:FindFirstChildWhichIsA("Humanoid")
+        if Humanoid and Humanoid:GetState() ~= Enum.HumanoidStateType.Dead then
+            Humanoid.RootPart.CFrame = CoordinateFrame
+        end
+    end
+end
+
